@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f7f4">
+<meta name="description" content="PricePilot helps you compare product offers, track price history, and discover deals.">
+<link rel="manifest" href="manifest.webmanifest">
+<title>PricePilot — Buy smarter</title>
+<style>
+:root{--bg:#f7f7f4;--surface:#fff;--ink:#171915;--muted:#777b72;--line:#e8e9e2;--green:#226b4b;--green-soft:#e8f3ec;--gold:#9b6a17;--gold-soft:#fff4dd;--shadow:0 12px 36px rgba(22,30,20,.06);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #91c9a9;outline-offset:2px}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}.topbar{display:flex;align-items:center;justify-content:space-between;padding:22px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.7px}.logo{width:34px;height:34px;border-radius:12px;background:var(--green);color:white;display:grid;place-items:center;font-weight:800}.nav{display:flex;gap:8px}.nav button,.quiet{border:0;background:transparent;color:var(--muted);padding:10px 13px;border-radius:12px}.nav button.active,.nav button:hover{background:#eceee7;color:var(--ink)}.pill{font-size:12px;font-weight:650;padding:5px 9px;border-radius:999px;background:var(--green-soft);color:var(--green);display:inline-flex;align-items:center;gap:5px}.hero{padding:42px 0 25px;max-width:760px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:var(--green);font-weight:800}.hero h1{font-size:clamp(36px,6vw,62px);line-height:1.02;letter-spacing:-2.8px;margin:13px 0 16px;font-weight:780}.hero p{font-size:17px;color:var(--muted);max-width:570px;margin:0 0 25px}.searchbox{display:flex;align-items:center;gap:10px;padding:8px 8px 8px 17px;background:white;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);max-width:730px}.searchbox svg{flex-shrink:0;color:var(--muted)}.searchbox input{border:0;outline:0;min-width:0;flex:1;padding:11px 0;background:transparent;color:var(--ink)}.primary{border:0;background:var(--green);color:white;padding:12px 18px;border-radius:13px;font-weight:700}.primary:hover{background:#18563b}.secondary{border:1px solid var(--line);background:white;padding:10px 13px;border-radius:12px;font-weight:650;color:var(--ink)}.hint{font-size:12px;color:var(--muted);margin:10px 3px}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:32px 0 16px}.sectionhead h2{margin:0;font-size:22px;letter-spacing:-.6px}.sectionhead p{margin:3px 0 0;color:var(--muted);font-size:13px}.chips{display:flex;gap:8px;overflow:auto;padding:2px 0 5px;scrollbar-width:none}.chip{white-space:nowrap;border:1px solid var(--line);background:rgba(255,255,255,.65);padding:9px 14px;border-radius:999px;color:#55594f}.chip.selected{background:var(--ink);color:white;border-color:var(--ink)}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:20px 0 14px}.count{color:var(--muted);font-size:13px}.sort{background:white;border:1px solid var(--line);border-radius:11px;padding:9px 12px;color:var(--ink)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .18s ease,box-shadow .18s ease;min-width:0}.card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}.product-art{height:155px;background:linear-gradient(135deg,#f0f1e9,#f9f8f3);display:grid;place-items:center;position:relative}.product-art .emoji{font-size:58px;filter:drop-shadow(0 8px 8px rgba(0,0,0,.08))}.tag{position:absolute;top:12px;left:12px}.heart{position:absolute;right:12px;top:12px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(0,0,0,.06);background:rgba(255,255,255,.9);font-size:18px;color:#6b7067}.heart.saved{color:#c23d54}.cardbody{padding:17px}.category{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:750}.card h3{font-size:16px;line-height:1.35;letter-spacing:-.3px;margin:6px 0 5px;min-height:43px}.variant{font-size:12px;color:var(--muted);margin-bottom:14px}.price-row{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.price{font-size:25px;font-weight:800;letter-spacing:-1px}.price-note{font-size:12px;color:var(--green);font-weight:700}.compareline{border-top:1px solid var(--line);margin-top:15px;padding-top:13px;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;color:var(--muted)}.compareline strong{color:var(--ink)}.card-actions{display:flex;gap:8px;margin-top:13px}.card-actions button{flex:1}.empty{grid-column:1/-1;padding:50px 20px;text-align:center;border:1px dashed #d6d9cf;border-radius:var(--radius);color:var(--muted)}.trustbar{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:32px 0}.trust{padding:17px;background:#eff0e9;border-radius:17px}.trust strong{display:block;font-size:14px}.trust span{font-size:12px;color:var(--muted)}.notice{padding:13px 15px;background:var(--gold-soft);border:1px solid #f1e2bf;border-radius:14px;color:#77561c;font-size:12px;margin:18px 0 0}.footer{padding:35px 0 45px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:45px}.footerrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.modalback{position:fixed;inset:0;background:rgba(15,20,15,.45);display:none;align-items:center;justify-content:center;padding:18px;z-index:10}.modalback.open{display:flex}.modal{width:min(620px,100%);max-height:90vh;overflow:auto;background:var(--bg);border-radius:24px;padding:23px;box-shadow:0 25px 80px rgba(0,0,0,.2)}.modalhead{display:flex;justify-content:space-between;align-items:start;gap:15px}.modal h2{margin:0;font-size:24px;letter-spacing:-.7px}.close{border:0;background:#e9ebe3;border-radius:50%;width:36px;height:36px;font-size:21px}.offer{display:flex;align-items:center;gap:12px;background:white;border:1px solid var(--line);padding:15px;border-radius:15px;margin-top:10px}.offerinfo{flex:1;min-width:0}.offerinfo strong{display:block}.offerinfo span{font-size:12px;color:var(--muted)}.offerprice{text-align:right;font-weight:800;font-size:18px;white-space:nowrap}.offerprice small{display:block;color:var(--muted);font-size:11px;font-weight:500}.best{border-color:#9ccab0;background:#f7fcf8}.history{background:white;border:1px solid var(--line);border-radius:16px;padding:16px;margin-top:16px}.history svg{width:100%;height:auto;display:block}.historylabel{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#20251f;color:white;padding:12px 17px;border-radius:12px;z-index:20;transition:.2s;max-width:calc(100% - 30px);font-size:13px}.toast.show{opacity:1;transform:translate(-50%,0)}.watchform{display:flex;gap:8px;margin-top:15px}.watchform input{flex:1;min-width:0;padding:11px;border:1px solid var(--line);border-radius:12px;background:white}.smallnote{font-size:11px;color:var(--muted);margin-top:8px}.hidden{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding-top:30px}.product-art{height:140px}.nav button{padding:9px 10px}}
+@media(max-width:520px){.wrap{width:min(100% - 24px,1120px)}.topbar{padding:15px 0}.brand{font-size:18px}.nav button{font-size:12px;padding:8px}.hero h1{letter-spacing:-1.8px}.hero{padding-top:27px}.hero p{font-size:15px}.searchbox{gap:7px;padding-left:12px}.searchbox .primary{padding:11px 12px}.grid{grid-template-columns:1fr 1fr;gap:10px}.product-art{height:118px}.product-art .emoji{font-size:44px}.cardbody{padding:12px}.card h3{font-size:14px;min-height:38px}.price{font-size:21px}.card-actions{flex-direction:column}.card-actions button{padding:9px}.trustbar{grid-template-columns:1fr;gap:8px}.trust{padding:13px}.sectionhead{margin-top:25px}.sectionhead h2{font-size:20px}.toolbar{align-items:center}.hint{font-size:11px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="topbar">
+  <div class="brand"><span class="logo">P</span> PricePilot <span class="pill">BETA</span></div>
+  <nav class="nav" aria-label="Main navigation">
+    <button class="active" data-view="discover">Discover</button>
+    <button data-view="saved">Wishlist <span id="savedCount"></span></button>
+  </nav>
+</header>
+<main>
+<section class="hero">
+  <div class="eyebrow">Spend smarter, not longer</div>
+  <h1>Find the right price.<br>Skip the guesswork.</h1>
+  <p>Compare offers, spot deals and track prices — all in one calm, simple place.</p>
+  <form class="searchbox" id="searchForm" role="search">
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m16.5 16.5 4 4"/></svg>
+    <input id="searchInput" type="search" placeholder="Search phones, shoes, coffee makers…" autocomplete="off" aria-label="Search products">
+    <button class="primary" type="submit">Search</button>
+  </form>
+  <div class="hint">Try “headphones”, “running shoes” or “air fryer”.</div>
+  <div class="notice"><strong>Prototype data:</strong> prices and retailers shown here are fictional examples, not live offers. We'll connect verified retailer feeds next.</div>
+</section>
+<section>
+  <div class="sectionhead"><div><h2 id="sectionTitle">Explore products</h2><p id="sectionSubtitle">A clearer way to compare what matters.</p></div></div>
+  <div class="chips" id="categoryChips" aria-label="Filter by category"></div>
+  <div class="toolbar"><span class="count" id="resultCount" aria-live="polite"></span><label><span class="hidden">Sort products</span><select class="sort" id="sortSelect" aria-label="Sort products"><option value="recommended">Recommended</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="name">Name: A–Z</option></select></label></div>
+  <div class="grid" id="productGrid"></div>
+</section>
+<section class="trustbar" aria-label="Product principles">
+  <div class="trust"><strong>Clear comparisons</strong><span>Variants matter. We don't mix them up.</span></div>
+  <div class="trust"><strong>Honest price status</strong><span>Know when data is sample or out of date.</span></div>
+  <div class="trust"><strong>Less noise</strong><span>Useful details, without the clutter.</span></div>
+</section>
+</main>
+<footer class="footer"><div class="footerrow"><span>© <span id="year"></span> PricePilot · Buy smarter.</span><span>Independent prototype · Not affiliated with retailers.</span></div></footer>
+</div>
+<div class="modalback" id="modalBack" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal"><div class="modalhead"><div><div class="eyebrow">Offer comparison</div><h2 id="modalTitle">Product</h2><div id="modalVariant" class="variant"></div></div><button class="close" id="closeModal" aria-label="Close comparison">×</button></div>
+  <div id="offerList"></div>
+  <div class="history"><div class="historylabel"><strong>Illustrative price history</strong><span>Sample data</span></div><svg viewBox="0 0 520 130" role="img" aria-label="Illustrative price history chart"><path d="M10 100 H510 M10 65 H510 M10 30 H510" stroke="#e8e9e2" stroke-width="1" fill="none"/><path d="M10 25 C70 35 80 60 130 53 S205 75 250 62 S320 78 365 85 S440 70 510 92" stroke="#226b4b" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M10 25 C70 35 80 60 130 53 S205 75 250 62 S320 78 365 85 S440 70 510 92 L510 115 L10 115Z" fill="#e8f3ec" opacity=".8"/></svg><div class="historylabel"><span>Earlier</span><span>Now · illustrative</span></div></div>
+  <form id="watchForm" class="watchform"><input id="targetInput" type="number" min="1" step="1" placeholder="Alert me below ₹…" aria-label="Target price in rupees" required><button class="primary" type="submit">Set target</button></form>
+  <div class="smallnote">Target prices are saved on this device only. Notifications and live monitoring are not active in this prototype.</div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+"use strict";
+const PRODUCTS = [
+ {id:"p101",name:"Soundcore Life Q20",category:"Audio",variant:"Wireless headphones · Black",emoji:"🎧",offers:[["ShopOne",3499],["DealCart",3299],["MegaStore",3799]]},
+ {id:"p102",name:"Pulse Buds Pro",category:"Audio",variant:"Wireless earbuds · 2nd gen",emoji:"🎵",offers:[["ShopOne",2499],["DealCart",2699],["MegaStore",2399]]},
+ {id:"p103",name:"Nova X Smartphone",category:"Phones",variant:"8 GB RAM · 128 GB · Midnight",emoji:"📱",offers:[["ShopOne",24999],["DealCart",23949],["MegaStore",25999]]},
+ {id:"p104",name:"Nova X Smartphone",category:"Phones",variant:"8 GB RAM · 256 GB · Midnight",emoji:"📱",offers:[["ShopOne",27999],["DealCart",28499],["MegaStore",26999]]},
+ {id:"p105",name:"Everyday Running Shoes",category:"Fashion",variant:"Men · UK 9 · Grey",emoji:"👟",offers:[["ShopOne",2199],["DealCart",1999],["MegaStore",2299]]},
+ {id:"p106",name:"Everyday Running Shoes",category:"Fashion",variant:"Men · UK 8 · Grey",emoji:"👟",offers:[["ShopOne",2199],["DealCart",1899],["MegaStore",2299]]},
+ {id:"p107",name:"Air Fryer 4.5L",category:"Home",variant:"4.5 litre · 1500 W",emoji:"🍟",offers:[["ShopOne",4999],["DealCart",4599],["MegaStore",4799]]},
+ {id:"p108",name:"Brew Mini Coffee Maker",category:"Home",variant:"Drip coffee maker · 600 ml",emoji:"☕",offers:[["ShopOne",1899],["DealCart",1799],["MegaStore",1999]]},
+ {id:"p109",name:"Workday Laptop",category:"Computers",variant:"16 GB RAM · 512 GB SSD",emoji:"💻",offers:[["ShopOne",58990],["DealCart",57490],["MegaStore",59990]]},
+ {id:"p110",name:"Canvas Everyday Backpack",category:"Fashion",variant:"22 litre · Olive",emoji:"🎒",offers:[["ShopOne",1299],["DealCart",1199],["MegaStore",1399]]},
+ {id:"p111",name:"Smart Fitness Watch",category:"Wearables",variant:"GPS · 1.8 inch display",emoji:"⌚",offers:[["ShopOne",3999],["DealCart",3699],["MegaStore",3899]]},
+ {id:"p112",name:"Desk Lamp",category:"Home",variant:"LED · Dimmable · Warm/white",emoji:"💡",offers:[["ShopOne",899],["DealCart",799],["MegaStore",999]]}
+];
+const CATEGORIES=["All","Phones","Audio","Computers","Fashion","Home","Wearables"];
+const state={query:"",category:"All",view:"discover",sort:"recommended",activeId:null};
+const $=id=>document.getElementById(id);
+function safeGet(key,fallback){try{const raw=localStorage.getItem(key);return raw?JSON.parse(raw):fallback}catch{return fallback}}
+function safeSet(key,value){try{localStorage.setItem(key,JSON.stringify(value));return true}catch{return false}}
+let saved=safeGet("pricepilot:saved",[]);
+let targets=safeGet("pricepilot:targets",{});
+function money(n){return new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(n)}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function lowest(p){return Math.min(...p.offers.map(o=>o[1]))}
+function toast(message){const t=$("toast");t.textContent=message;t.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove("show"),2600)}
+function categories(){ $("categoryChips").innerHTML=CATEGORIES.map(c=>`<button class="chip ${state.category===c?"selected":""}" data-category="${escapeHTML(c)}" aria-pressed="${state.category===c}">${escapeHTML(c)}</button>`).join("")}
+function filtered(){
+ let list=PRODUCTS.filter(p=>(state.category==="All"||p.category===state.category)&&(`${p.name} ${p.category} ${p.variant}`).toLowerCase().includes(state.query.toLowerCase()));
+ if(state.view==="saved")list=list.filter(p=>saved.includes(p.id));
+ if(state.sort==="low")list.sort((a,b)=>lowest(a)-lowest(b));
+ if(state.sort==="high")list.sort((a,b)=>lowest(b)-lowest(a));
+ if(state.sort==="name")list.sort((a,b)=>a.name.localeCompare(b.name)||a.variant.localeCompare(b.variant));
+ return list;
+}
+function render(){
+ categories();
+ const list=filtered();
+ $("savedCount").textContent=saved.length?`(${saved.length})`:"";
+ $("sectionTitle").textContent=state.view==="saved"?"Your wishlist":state.query?`Results for “${state.query}”`: "Explore products";
+ $("sectionSubtitle").textContent=state.view==="saved"?"Your saved products and target prices.":"Compare variants and see the lowest sample offer.";
+ $("resultCount").textContent=`${list.length} ${list.length===1?"product":"products"}`;
+ $("productGrid").innerHTML=list.length?list.map(p=>{
+  const low=lowest(p),best=p.offers.filter(o=>o[1]===low).length;
+  return `<article class="card"><div class="product-art"><span class="pill tag">${escapeHTML(p.category)}</span><span class="emoji" aria-hidden="true">${p.emoji}</span><button class="heart ${saved.includes(p.id)?"saved":""}" data-save="${p.id}" aria-label="${saved.includes(p.id)?"Remove from":"Add to"} wishlist">${saved.includes(p.id)?"♥":"♡"}</button></div><div class="cardbody"><div class="category">${escapeHTML(p.category)}</div><h3>${escapeHTML(p.name)}</h3><div class="variant">${escapeHTML(p.variant)}</div><div class="price-row"><span class="price">${money(low)}</span><span class="price-note">Lowest sample</span></div><div class="compareline"><span>${p.offers.length} sample offers</span><span><strong>${best===1?"Best match":"Tie"}</strong></span></div><div class="card-actions"><button class="primary" data-compare="${p.id}">Compare</button><button class="secondary" data-save="${p.id}">${saved.includes(p.id)?"Saved ✓":"♡ Save"}</button></div></div></article>`
+ }).join(""):`<div class="empty"><strong>${state.view==="saved"?"Nothing saved yet":"No matching products"}</strong><p>${state.view==="saved"?"Tap the heart on a product to keep it here.":"Try another keyword or choose a different category."}</p><button class="secondary" id="clearFilters">Clear filters</button></div>`;
+}
+function openCompare(id){
+ const p=PRODUCTS.find(x=>x.id===id);if(!p)return;
+ state.activeId=id;
+ $("modalTitle").textContent=p.name;
+ $("modalVariant").textContent=p.variant+" · "+p.category;
+ const low=lowest(p);
+ $("offerList").innerHTML=[...p.offers].sort((a,b)=>a[1]-b[1]).map((o,i)=>`<div class="offer ${o[1]===low?"best":""}"><div class="offerinfo"><strong>${escapeHTML(o[0])} ${o[1]===low?'<span class="pill">Lowest sample</span>':""}</strong><span>Example retailer · not live verified</span></div><div class="offerprice">${money(o[1])}<small>product price only</small></div></div>`).join("");
+ $("targetInput").value=targets[id]||"";
+ $("modalBack").classList.add("open");$("closeModal").focus();
+}
+function closeModal(){$("modalBack").classList.remove("open");state.activeId=null}
+$("searchForm").addEventListener("submit",e=>{e.preventDefault();state.query=$("searchInput").value.trim();state.view="discover";document.querySelectorAll("[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===state.view));render()});
+$("searchInput").addEventListener("input",e=>{state.query=e.target.value.trim();state.view="discover";document.querySelectorAll("[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===state.view));render()});
+$("categoryChips").addEventListener("click",e=>{const b=e.target.closest("[data-category]");if(!b)return;state.category=b.dataset.category;render()});
+$("sortSelect").addEventListener("change",e=>{state.sort=e.target.value;render()});
+document.querySelectorAll("[data-view]").forEach(b=>b.addEventListener("click",()=>{state.view=b.dataset.view;document.querySelectorAll("[data-view]").forEach(x=>x.classList.toggle("active",x===b));render()}));
+$("productGrid").addEventListener("click",e=>{
+ const compare=e.target.closest("[data-compare]");if(compare){openCompare(compare.dataset.compare);return}
+ const save=e.target.closest("[data-save]");if(save){const id=save.dataset.save;saved=saved.includes(id)?saved.filter(x=>x!==id):[...saved,id];if(!safeSet("pricepilot:saved",saved))toast("Storage unavailable. Your wishlist may not persist.");else toast(saved.includes(id)?"Saved to wishlist":"Removed from wishlist");render();return}
+ if(e.target.id==="clearFilters"){state.query="";state.category="All";state.view="discover";$("searchInput").value="";render()}
+});
+$("closeModal").addEventListener("click",closeModal);
+$("modalBack").addEventListener("click",e=>{if(e.target===$("modalBack"))closeModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+$("watchForm").addEventListener("submit",e=>{e.preventDefault();if(!state.activeId)return;const val=Number($("targetInput").value);if(!Number.isFinite(val)||val<=0){toast("Enter a valid target price.");return}targets[state.activeId]=Math.round(val);if(!safeSet("pricepilot:targets",targets)){toast("Could not save target on this device.");return}toast("Target saved on this device.");});
+$("year").textContent=new Date().getFullYear();
+render();
+if("serviceWorker" in navigator && location.protocol.startsWith("http")){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}))}
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "PricePilot \u2014 Buy smarter",
+  "short_name": "PricePilot",
+  "description": "Compare sample offers and save products to your wishlist.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f7f4",
+  "theme_color": "#f7f7f4",
+  "icons": []
+}
